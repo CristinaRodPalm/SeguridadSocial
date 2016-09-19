@@ -19,21 +19,18 @@ public class Main {
         System.out.println("Altas a la seguridad social: " + seguridadSocial.obtenerTodas());
 
 
-        System.out.println("Baja a la seguridad social: " + anna);
+        System.out.println("Baja a la seguridad social: " + anna.toString());
         seguridadSocial.bajaPersona(anna.getDni());
-
 
         System.out.println("Lista de afiliados a la S.S.: " + seguridadSocial.obtenerTodas());
 
-        System.out.println("obtenerPersonaPorDNI: " + seguridadSocial.obtenerPersonaPorDNI(jose.getDni()));
+        System.out.println("obtenerPersonaPorDNI: " + seguridadSocial.obtenerPersonaPorDNI(jose.getDni()).toString());
 
-        System.out.println("obtenerPersonaPorNumSS: " + seguridadSocial.obtenerPersonaPorNumSS(maria.getNumSeguridadSocial()));
+        System.out.println("obtenerPersonaPorNumSS: " + seguridadSocial.obtenerPersonaPorNumSS(maria.getNumSeguridadSocial()).toString());
 
         System.out.println("obtenerPersonasRangoSalarial: " + seguridadSocial.obtenerPersonasRangoSalarial(23000.00, 45000.00));
 
         System.out.println("obtenerPersonasMayoresQue: " + seguridadSocial.obtenerPersonasMayoresQue(25));
-
-
 
     }
 }

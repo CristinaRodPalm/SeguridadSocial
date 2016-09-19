@@ -69,4 +69,9 @@ public class Persona {
         this.edad = edad;
         this.salario = salario;
     }
+
+    @Override
+    public String toString() {
+        return nombre + " " + apellidos + ", " + edad + ", con número de seguridad social " + numSeguridadSocial + ", y un salario de " + salario;
+    }
 }
