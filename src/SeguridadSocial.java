@@ -22,13 +22,15 @@ public class SeguridadSocial {
     }
 
     public void bajaPersona(String dni) {
-        for (int i = 0; i < personasList.size(); i++) {
+        /*for (int i = 0; i < personasList.size(); i++) {
             Persona aux = personasList.get(i);
-            if (aux.getDni() == dni) {
+            if (aux.getDni().equals(dni)){
                 personasList.remove(i);
                 i = personasList.size();
             }
-        }
+        }*/
+
+        personasList.removeIf(persona -> persona.getDni().equals(dni));
     }
 
     public Persona obtenerPersonaPorDNI(String dni) {
@@ -89,6 +91,32 @@ public class SeguridadSocial {
 
     public List<Persona> obtenerTodas(){
         return personasList;
+    }
+
+    // Ej2
+    public Persona obtenerSalarioMaximo(double max){
+        for (int i = 0; i < personasList.size(); i++) {
+            Persona aux = personasList.get(i);
+            if (aux.getSalario() > max) {
+                // si la encuentra devuelve a esa persona
+                return aux;
+            }
+        }
+        //si acaba y no la encuentra, devuelve null (no encontrado)
+        return null;
+    }
+    // Ej2
+    public Persona obtenerSalarioMinimo(double min){
+        Persona aux = new Persona();
+        for (int i = 0; i < personasList.size(); i++) {
+            aux = personasList.get(i);
+            if (aux.getSalario() < min){
+                min = aux.getSalario();
+                // si la encuentra devuelve a esa persona
+            }
+        }
+        //si acaba y no la encuentra, devuelve null (no encontrado)
+        return aux;
     }
 
     @Override
