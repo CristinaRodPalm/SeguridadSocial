@@ -2,12 +2,10 @@
  * Created by Cristina on 19/09/2016.
  */
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SeguridadSocial {
 
@@ -26,7 +24,7 @@ public class SeguridadSocial {
     public void altaPersona(Persona persona) {
 
         boolean repetida = personasList.stream().anyMatch(p -> p.getDni().equals(persona.getDni())
-                || p.getNumSeguridadSocial().equals(persona.getNumSeguridadSocial()));
+                  || p.getNumSeguridadSocial().equals(persona.getNumSeguridadSocial()));
 
         if(!repetida){
             dniHashMap.put(persona.getDni(), persona);
@@ -139,9 +137,11 @@ public class SeguridadSocial {
         return dniHashMap.values();
     }
 
-    public Persona obtenerSalarioMaximo(){
-        double max = Double.MIN_VALUE;
+    public void obtenerSalarioMaximo(){
+         dniHashMap.values().stream().max(Comparator.comparing(Persona::getSalario)).ifPresent(maxInt -> System.out.println("El salario máximo es "+maxInt));
 
+        /*
+        double max = Double.MIN_VALUE;
 
 
         for (int i = 0; i < personasList.size(); i++) {
@@ -154,9 +154,14 @@ public class SeguridadSocial {
         }
         //si acaba y no la encuentra, devuelve null (no encontrado)
         return null;
+        */
+
     }
 
-    public Persona obtenerSalarioMinimo(){
+    public void obtenerSalarioMinimo(){
+        dniHashMap.values().stream().min(Comparator.comparing(Persona::getSalario)).ifPresent(min -> System.out.println("El salario mínimo es "+min));
+
+        /*
         double min = Double.MAX_VALUE;
 
         Persona aux = new Persona();
@@ -170,6 +175,7 @@ public class SeguridadSocial {
         }
         //si acaba y no la encuentra, devuelve null (no encontrado)
         return aux;
+        */
     }
 
     @Override

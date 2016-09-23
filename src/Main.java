@@ -24,18 +24,22 @@ public class Main {
         System.out.println("\nBaja a la seguridad social: " + anna.toString());
         seguridadSocial.bajaPersona(anna.getDni());
 
-        System.out.println("\nLista de afiliados a la S.S.: " + seguridadSocial.obtenerTodas());
+        System.out.println("Lista de afiliados a la S.S.: " + seguridadSocial.obtenerTodas());
 
         System.out.println("\nobtenerPersonaPorDNI: " + seguridadSocial.obtenerPersonaPorDNI(jose.getDni()));
 
-        System.out.println("\nobtenerPersonaPorNumSS: " + seguridadSocial.obtenerPersonaPorNumSS(maria.getNumSeguridadSocial()));
+        System.out.println("obtenerPersonaPorNumSS: " + seguridadSocial.obtenerPersonaPorNumSS(maria.getNumSeguridadSocial()));
 
-        System.out.println("\nobtenerPersonasRangoSalarial: " + seguridadSocial.obtenerPersonasRangoSalarial(23000.00, 61300.20));
+        System.out.println("obtenerPersonasRangoSalarial: " + seguridadSocial.obtenerPersonasRangoSalarial(23000.00, 61300.20));
 
         System.out.println("\nobtenerPersonasMayoresQue: " + seguridadSocial.obtenerPersonasMayoresQue(25));
 
-        System.out.println("\nobtenerSalarioMaximo: "+ seguridadSocial.obtenerSalarioMaximo());
+        System.out.println("\nEJERCICIO 2");
 
-        System.out.println("\nobtenerSalarioMinimo: "+ seguridadSocial.obtenerSalarioMinimo());
+       // System.out.println("\nobtenerSalarioMaximo: "+ seguridadSocial.obtenerSalarioMaximo());
+        seguridadSocial.obtenerSalarioMaximo();
+
+        // System.out.println("\nobtenerSalarioMinimo: "+ seguridadSocial.obtenerSalarioMinimo());
+        seguridadSocial.obtenerSalarioMinimo();
     }
 }
