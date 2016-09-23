@@ -3,16 +3,14 @@
  */
 
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SeguridadSocial {
 
     private List<Persona> personasList;
 
-    HashMap<String, Persona> dniHashMap;
-    HashMap<String, Persona> ssHashMap;
+    private HashMap<String, Persona> dniHashMap;
+    private HashMap<String, Persona> ssHashMap;
 
     public SeguridadSocial() {
         personasList = new ArrayList<>();
