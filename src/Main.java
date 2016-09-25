@@ -33,10 +33,8 @@ public class Main {
 
         System.out.println("\nEJERCICIO 2");
 
-       // System.out.println("\nobtenerSalarioMaximo: "+ seguridadSocial.obtenerSalarioMaximo());
-        seguridadSocial.obtenerSalarioMaximo();
+        System.out.println("\nobtenerSalarioMaximo: "+ seguridadSocial.obtenerSalarioMaximo());
 
-        // System.out.println("\nobtenerSalarioMinimo: "+ seguridadSocial.obtenerSalarioMinimo());
-        seguridadSocial.obtenerSalarioMinimo();
+        System.out.println("\nobtenerSalarioMinimo: "+ seguridadSocial.obtenerSalarioMinimo());
     }
 }
