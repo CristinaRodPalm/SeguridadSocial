@@ -7,13 +7,10 @@ import java.util.stream.Collectors;
 
 public class SeguridadSocial {
 
-    private List<Persona> personasList;
-
     private HashMap<String, Persona> dniHashMap;
     private HashMap<String, Persona> ssHashMap;
 
     public SeguridadSocial() {
-        personasList = new ArrayList<>();
         dniHashMap = new HashMap<>();
         ssHashMap = new HashMap<>();
     }
@@ -21,7 +18,7 @@ public class SeguridadSocial {
     // Debes comprobar que no se introduzcan dos personas con el mismo DNI/Número Seguridad Social
     public void altaPersona(Persona persona) {
 
-        boolean repetida = personasList.stream().anyMatch(p -> p.getDni().equals(persona.getDni())
+        boolean repetida = dniHashMap.values().stream().anyMatch(p -> p.getDni().equals(persona.getDni())
                   || p.getNumSeguridadSocial().equals(persona.getNumSeguridadSocial()));
 
         if(!repetida){
@@ -68,10 +65,4 @@ public class SeguridadSocial {
         return dniHashMap.values().stream().min(Comparator.comparing(Persona::getSalario)).get();
     }
 
-    @Override
-    public String toString() {
-        return "SeguridadSocial{" +
-                "personasList=" + personasList +
-                '}';
-    }
 }
