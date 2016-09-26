@@ -39,13 +39,18 @@ public class Main {
 
 
         seguridadSocial.obtenerOrdenDni();
-        //System.out.println("\nobtenerOrdenDni: " + seguridadSocial.obtenerOrdenDni());
-        /*
+        seguridadSocial.obtenerOrdenNumSS();
+        seguridadSocial.obtenerOrdenDni();
+        seguridadSocial.obtenerOrdenDni();
+        seguridadSocial.obtenerOrdenDni();
+        seguridadSocial.obtenerOrdenDni();
+
+
         System.out.println("\nobtenerOrdenNumSS: " + seguridadSocial.obtenerOrdenNumSS());
         System.out.println("\nobtenerOrdenNombre: " + seguridadSocial.obtenerOrdenNombre());
         System.out.println("\nobtenerOrdenApellidos: " + seguridadSocial.obtenerOrdenApellidos());
         System.out.println("\nobtenerOrdenEdad: " + seguridadSocial.obtenerOrdenEdad());
         System.out.println("\nobtenerOrdenSalario: " + seguridadSocial.obtenerOrdenSalario());
-        */
+
     }
 }

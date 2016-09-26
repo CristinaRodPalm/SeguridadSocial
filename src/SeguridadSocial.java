@@ -74,28 +74,46 @@ public class SeguridadSocial {
         ordenDni.sort(Comparator.comparing(Persona::getDni));
 
         return ordenDni;
-
     }
 
-/*
-    public Collection<Persona> obtenerOrdenNumSS(){
+    public List<Persona> obtenerOrdenNumSS(){
+        ArrayList<Persona> ordenNumSS = new ArrayList<>(dniHashMap.values());
 
+        ordenNumSS.sort(Comparator.comparing(Persona::getNumSeguridadSocial));
+
+        return ordenNumSS;
     }
 
-    public Collection<Persona> obtenerOrdenNombre(){
+    public List<Persona> obtenerOrdenNombre(){
+        ArrayList<Persona> ordenNombre = new ArrayList<>(dniHashMap.values());
 
+        ordenNombre.sort(Comparator.comparing(Persona::getNombre));
+
+        return ordenNombre;
     }
 
-    public Collection<Persona> obtenerOrdenApellidos(){
+    public List<Persona> obtenerOrdenApellidos(){
+        ArrayList<Persona> ordenApellido = new ArrayList<>(dniHashMap.values());
 
+        ordenApellido.sort(Comparator.comparing(Persona::getApellidos));
+
+        return ordenApellido;
     }
 
-    public Collection<Persona> obtenerOrdenEdad(){
+    public List<Persona> obtenerOrdenEdad(){
+        ArrayList<Persona> ordenEdad = new ArrayList<>(dniHashMap.values());
 
+        ordenEdad.sort(Comparator.comparingInt(Persona::getEdad));
+
+        return ordenEdad;
     }
 
-    public Collection<Persona> obtenerOrdenSalario(){
+    public List<Persona> obtenerOrdenSalario(){
+        ArrayList<Persona> ordenSalario = new ArrayList<>(dniHashMap.values());
 
+        ordenSalario.sort(Comparator.comparingDouble(Persona::getSalario));
+
+        return ordenSalario;
     }
-*/
+
 }
