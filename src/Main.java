@@ -36,5 +36,16 @@ public class Main {
         System.out.println("\nobtenerSalarioMaximo: "+ seguridadSocial.obtenerSalarioMaximo());
 
         System.out.println("\nobtenerSalarioMinimo: "+ seguridadSocial.obtenerSalarioMinimo());
+
+
+        seguridadSocial.obtenerOrdenDni();
+        //System.out.println("\nobtenerOrdenDni: " + seguridadSocial.obtenerOrdenDni());
+        /*
+        System.out.println("\nobtenerOrdenNumSS: " + seguridadSocial.obtenerOrdenNumSS());
+        System.out.println("\nobtenerOrdenNombre: " + seguridadSocial.obtenerOrdenNombre());
+        System.out.println("\nobtenerOrdenApellidos: " + seguridadSocial.obtenerOrdenApellidos());
+        System.out.println("\nobtenerOrdenEdad: " + seguridadSocial.obtenerOrdenEdad());
+        System.out.println("\nobtenerOrdenSalario: " + seguridadSocial.obtenerOrdenSalario());
+        */
     }
 }

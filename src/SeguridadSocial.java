@@ -10,6 +10,7 @@ public class SeguridadSocial {
     private HashMap<String, Persona> dniHashMap;
     private HashMap<String, Persona> ssHashMap;
 
+
     public SeguridadSocial() {
         dniHashMap = new HashMap<>();
         ssHashMap = new HashMap<>();
@@ -65,4 +66,36 @@ public class SeguridadSocial {
         return dniHashMap.values().stream().min(Comparator.comparing(Persona::getSalario)).get();
     }
 
+    // EJERCICIO 3
+
+    public List<Persona> obtenerOrdenDni(){
+        ArrayList<Persona> ordenDni = new ArrayList<>(dniHashMap.values());
+
+        ordenDni.sort(Comparator.comparing(Persona::getDni));
+
+        return ordenDni;
+
+    }
+
+/*
+    public Collection<Persona> obtenerOrdenNumSS(){
+
+    }
+
+    public Collection<Persona> obtenerOrdenNombre(){
+
+    }
+
+    public Collection<Persona> obtenerOrdenApellidos(){
+
+    }
+
+    public Collection<Persona> obtenerOrdenEdad(){
+
+    }
+
+    public Collection<Persona> obtenerOrdenSalario(){
+
+    }
+*/
 }

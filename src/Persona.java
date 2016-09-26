@@ -72,6 +72,6 @@ public class Persona {
 
     @Override
     public String toString() {
-        return nombre + " " + apellidos + ", " + edad + ", con número de seguridad social " + numSeguridadSocial + ", y un salario de " + salario+"\n";
+        return nombre + " " + apellidos + ", " + edad + ", con número de seguridad social " + numSeguridadSocial + ", y un salario de " + salario+", dni "+dni+"\n";
     }
 }
